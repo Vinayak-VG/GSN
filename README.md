@@ -1,1 +1,1 @@
-# GSN
+# WaterNeRF
