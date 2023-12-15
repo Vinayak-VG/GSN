@@ -1,1 +1,1 @@
-# WaterNeRF
+# GSN: Generalisable Segmentation in Neural Radiance Fields
