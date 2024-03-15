@@ -91,6 +91,23 @@ gdown https://drive.google.com/uc?id=16VnMcF1KJYxN9QId6TClMsZRahHNMW5g
 unzip nerf_llff_data.zip
 ```
 
+## Data Preparation
+
+The code for feature extraction has been taken from [N3F](https://github.com/dichotomies/N3F). Thanks to the original authors for providing it.
+Please follow the following instructions to prepare the features:
+- To download the DINO checkpoint, run the following command:
+    
+    Ubuntu
+    ```
+    cd feature_extractor
+    bash download_dino.sh
+    ```
+- To extract the DINO features and place them in the correct directory, run the following command. Note that we use the images downscaled by a factor of 8.
+    ```
+    python extract.py --dir_images ../data/nerf_llff_data/horns/images_4
+    ```
+
+
 ## Usage
 
 ### Training
