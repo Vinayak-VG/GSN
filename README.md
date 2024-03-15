@@ -2,7 +2,7 @@
 [Vinayak Gupta](https://vinayak-vg.github.io/)<sup>1</sup>,
 [Rahul Goel](https://rahulgoel.xyz/)<sup>2</sup>,
 [Dhawal Sirikonda](https://dhawal1939.github.io/)<sup>2</sup>,
-[P. J. Narayanan](https://scholar.google.co.in/citations?user=3HKjt_IAAAAJ&hl=en)<sup>2</sup>,
+[P. J. Narayanan](https://scholar.google.co.in/citations?user=3HKjt_IAAAAJ&hl=en)<sup>2</sup>
 
 
 <sup>1</sup>Indian Institute of Technology Madras, <sup>2</sup>International Institute of Information Technology, Hyderabad
@@ -83,7 +83,7 @@ unzip real_iconic_noface.zip
 
 ## [IMPORTANT] remove scenes that appear in the test set
 cd real_iconic_noface/
-rm -rf data2_fernvlsb data2_hugetrike data2_trexsanta data3_orchid data5_leafscene data5_lotr data5_redflower
+rm -rf data2_fernvlsb data2_hugetrike data2_trexsanta data3_orchid data5_leafscene data5_lotr data5_redflower data2_chesstable data2_colorfountain data4_shoerack data4_stove
 cd ../
 
 # LLFF dataset (eval)
