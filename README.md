@@ -96,14 +96,6 @@ unzip nerf_llff_data.zip
 ### Training
 
 ```bash
-# # single scene
-# # python3 train.py --config <config> --train_scenes <scene> --eval_scenes <scene> --optional[other kwargs]. Example:
-# python3 train.py --config configs/gnt_blender.txt --train_scenes drums --eval_scenes drums
-# python3 train.py --config configs/gnt_llff.txt --train_scenes orchids --eval_scenes orchids
-
-# # cross scene
-# # python3 train.py --config <config> --optional[other kwargs]. Example:
-# python3 train.py --config configs/gnt_full.txt 
 # Stage I
 CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --expname stageI_expt
 
@@ -218,14 +210,7 @@ You could also download our pre-train weights for direct model evaluation Low-Li
 ### Evaluation
 
 ```bash
-# single scene
-# python3 eval.py --config <config> --eval_scenes <scene> --expname <out-dir> --run_val --optional[other kwargs]. Example:
-# python3 eval.py --config configs/gnt_llff.txt --eval_scenes orchids --expname gnt_orchids --chunk_size 500 --run_val --N_samples 192
-# python3 eval.py --config configs/gnt_blender.txt --eval_scenes drums --expname gnt_drums --chunk_size 500 --run_val --N_samples 192
 
-# # cross scene
-# # python3 eval.py --config <config> --expname <out-dir> --run_val --optional[other kwargs]. Example:
-# python3 eval.py --config configs/gnt_full.txt --expname gnt_full --chunk_size 500 --run_val --N_samples 192
 python3 -W ignore eval_transibr.py --config configs/transibr_full.txt --expname transibr_gnt_dino_ft_viewindependent_512rays_trainall  --run_val --chunk_size 500 --folder_name DiNOFeats --dinofield --eval_scenes data2_chesstable --render_stride 1 ---llffhold 4
 ```
 
