@@ -12,7 +12,7 @@ eval_scenes = [trex, fern, flower, leaves, room, fortress, horns, orchids]
 llffhold = 8
 
 ### TRAINING
-N_rand = 512
+N_rand = 256
 lrate_feature = 0.001
 lrate_mlp = 0.0005
 lrate_decay_factor = 0.5

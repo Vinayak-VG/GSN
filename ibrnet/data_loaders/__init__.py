@@ -17,10 +17,12 @@ from .llff import *
 from .llff_test import *
 from .ibrnet_collected import *
 from .llff_render import *
+from .test_data import *
 
 dataset_dict = {
     "llff": LLFFDataset,
     "ibrnet_collected": IBRNetCollectedDataset,
     "llff_test": LLFFTestDataset,
     "llff_render": LLFFRenderDataset,
+    "test_data": Test_Data,
 }

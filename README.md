@@ -85,6 +85,11 @@ unzip real_iconic_noface.zip
 cd real_iconic_noface/
 rm -rf data2_fernvlsb data2_hugetrike data2_trexsanta data3_orchid data5_leafscene data5_lotr data5_redflower data2_chesstable data2_colorfountain data4_shoerack data4_stove
 cd ../
+mkdir test_data/
+mv real_iconic_noface/data2_chesstable test_data/
+mv real_iconic_noface/data2_colorfountain test_data/
+mv real_iconic_noface/data4_shoerack test_data/
+mv real_iconic_noface/data4_stove test_data/
 
 # LLFF dataset (eval)
 gdown https://drive.google.com/uc?id=16VnMcF1KJYxN9QId6TClMsZRahHNMW5g
@@ -104,7 +109,8 @@ Please follow the following instructions to prepare the features:
     ```
 - To extract the DINO features and place them in the correct directory, run the following command. Note that we use the images downscaled by a factor of 8.
     ```
-    python extract.py --dir_images ../data/nerf_llff_data/horns/images_4
+    bash extract.sh
+
     ```
 
 
@@ -114,15 +120,15 @@ Please follow the following instructions to prepare the features:
 
 ```bash
 # Stage I
-CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --expname stageI_expt
+CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --expname gsn --rootdir /home/vinayak/GSN/
 
 # Stage II
-CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --expname stageII_expt --dinofield  --dino_dim 64 --folder_name DiNOFeats
+CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --expname gsn --rootdir /home/vinayak/GSN/ --dinofield  --dino_dim 64 --folder_name DiNOFeats
 ```
 
 <!-- To decode coarse-fine outputs set `--N_importance > 0`, and with a separate fine network use `--single_net = False` -->
 
-You could also download our pre-train weights for direct model evaluation Low-Light-Results from [(google drive)](https://drive.google.com/file/d/1JzutV7Fi8rdabBDfl3-T53o_cfwdfdjY/view?usp=sharing)
+You could also download our pre-train weights for direct model evaluation from [(google drive)](https://drive.google.com/file/d/1JzutV7Fi8rdabBDfl3-T53o_cfwdfdjY/view?usp=sharing)
 <!-- 
 ### Pre-trained Models
 
@@ -228,7 +234,7 @@ You could also download our pre-train weights for direct model evaluation Low-Li
 
 ```bash
 
-python3 -W ignore eval_transibr.py --config configs/transibr_full.txt --expname transibr_gnt_dino_ft_viewindependent_512rays_trainall  --run_val --chunk_size 500 --folder_name DiNOFeats --dinofield --eval_scenes data2_chesstable --render_stride 1 ---llffhold 4
+python3 -W ignore eval_transibr.py --config configs/transibr_full.txt --expname gsn  --run_val --chunk_size 500 --folder_name DiNOFeats --dinofield --eval_dataset test_data --eval_scenes data2_chesstable --render_stride 2 ---llffhold 4
 ```
 
 <!-- ### Rendering

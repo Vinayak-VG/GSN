@@ -151,7 +151,7 @@ def train(args):
 
             # compute loss
             model.optimizer.zero_grad()
-            loss, scalars_to_log = criterion(ret["outputs_coarse"], ray_batch, scalars_to_log, global_step, fl_lt_start=200000)
+            loss, scalars_to_log = criterion(ret["outputs_coarse"], ray_batch, scalars_to_log)
 
             if ret["outputs_fine"] is not None:
                 fine_loss, scalars_to_log = criterion(

@@ -21,7 +21,7 @@ import torch
 import torch.utils.data.distributed
 
 from torch.utils.data import DataLoader
-from tasks.segment_2d_text import patch_seg
+from tasks.segment_2d_patch import patch_seg
 
 from ibrnet.data_loaders import dataset_dict
 from ibrnet.render_ray import render_rays

@@ -13,7 +13,6 @@ import torch.nn.functional as F
 from kmeans_pytorch.kmeans_pytorch import kmeans
 import os
 from matplotlib import pyplot as plt
-from region_grower_2d_trilateral import dev_region_grower_mask
 MEAN = [0.485, 0.456, 0.406]
 STD = [0.229, 0.224, 0.225]
 

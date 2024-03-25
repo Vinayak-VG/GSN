@@ -26,7 +26,7 @@ from ibrnet.data_loaders.load_features import load_features
 
 class LLFFTestDataset(Dataset):
     def __init__(self, args, mode, scenes=(), random_crop=True, **kwargs):
-        self.folder_path = os.path.join(args.rootdir, "/mnt/data/sushanth/vinayak/data/nerf_llff_data/")
+        self.folder_path = os.path.join(args.rootdir, "data/nerf_llff_data/")
         self.args = args
         self.mode = mode  # train / test / validation
         self.num_source_views = args.num_source_views

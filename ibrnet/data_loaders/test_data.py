@@ -24,9 +24,9 @@ from .data_utils import random_crop, random_flip, get_nearest_pose_ids
 from .llff_data_utils import load_llff_data, batch_parse_llff_poses
 
 
-class LLFFDataset(Dataset):
+class Test_Data(Dataset):
     def __init__(self, args, mode, **kwargs):
-        base_dir = os.path.join("data/real_iconic_noface/")
+        base_dir = os.path.join("data/test_data/")
         self.args = args
         self.mode = mode  # train / test / validation
         self.num_source_views = args.num_source_views
