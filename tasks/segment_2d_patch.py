@@ -54,11 +54,8 @@ def patch_seg(dinofeats, rgb_pred, gt_img, pca_file, thresh, path, global_step, 
         # save(dinofeats[120:250, 240:260], ["shoerack_patch_feats.png"], 'patches/shoerack_patch_feats_vd.pt')
         # quit()
 
-        patch_dinofeats = torch.load("/home/sushanth/ZSGNT_AAAI/patches/shoerack_patch_feats.pt")
+        patch_dinofeats = torch.load("/home/vinayak/GSN/patches/shoerack_patch_feats.pt")
         patch_dinofeats = patch_dinofeats[list(patch_dinofeats.keys())[0]].contiguous().view(-1, 64)
-        # print(patch_dinofeats.shape)
-        # print(patch_dinofeats.shape)
-        # quit()
 
         cluster_ids_x, cluster_centers = kmeans(
             X=patch_dinofeats, num_clusters=11, distance='euclidean', device=torch.device('cuda:0')

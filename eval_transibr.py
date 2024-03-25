@@ -240,7 +240,7 @@ def log_view(
         dino_gt = img_HWC2CHW(gt_dino)
         average_dino = img_HWC2CHW(average_dino.squeeze(-1))
 
-    patch_seg(ret["outputs_coarse"]["dino"].detach().cpu(), ret["outputs_coarse"]["rgb"].detach().cpu(), gt_img, "/home/sushanth/ZSGNT_AAAI/feature_extractor/pca/llff_clip_pcacake.pkl", 0.12, 'patch_seg.png', global_step, gt_dino)
+    patch_seg(ret["outputs_coarse"]["dino"].detach().cpu(), ret["outputs_coarse"]["rgb"].detach().cpu(), gt_img, "/home/vinayak/GSN/feature_extractor/pca_new/llff_dino_pcadata2_colorfountain.pkl", 0.12, 'patch_seg.png', global_step, gt_dino)
     
     if dinofield:
         average_dino[:3] = (average_dino[:3] - average_dino[:3].min())/(average_dino[:3].max() - average_dino[:3].min())

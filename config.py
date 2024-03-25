@@ -23,7 +23,7 @@ def config_parser():
     parser.add_argument(
         "--rootdir",
         type=str,
-        default="/home/sushanth/ZSGNT_AAAI",
+        default="/home/vinayak/GSN",
         help="the path to the project root directory. Replace this path with yours!",
     )
     parser.add_argument("--expname", type=str, help="experiment name")

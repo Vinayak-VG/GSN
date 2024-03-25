@@ -128,7 +128,7 @@ CUDA_VISIBLE_DEVICES=0 python3 train.py --config configs/transibr_full.txt --exp
 
 <!-- To decode coarse-fine outputs set `--N_importance > 0`, and with a separate fine network use `--single_net = False` -->
 
-You could also download our pre-train weights for direct model evaluation from [(google drive)](https://drive.google.com/file/d/1JzutV7Fi8rdabBDfl3-T53o_cfwdfdjY/view?usp=sharing)
+You could also download our pre-train weights for direct model evaluation from [(google drive)](https://drive.google.com/file/d/1ShjmESBCGdmewwOtopBwOJ7hEqwYY4D0/view?usp=sharing)
 <!-- 
 ### Pre-trained Models
 
