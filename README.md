@@ -1,4 +1,4 @@
-# GSN: Generalisable Segmentation in Neural Radiance Fields
+# GSN: Generalisable Segmentation in Neural Radiance Fields (AAAI 2024)
 [Vinayak Gupta](https://vinayak-vg.github.io/)<sup>1</sup>,
 [Rahul Goel](https://rahulgoel.xyz/)<sup>2</sup>,
 [Dhawal Sirikonda](https://dhawal1939.github.io/)<sup>2</sup>,
