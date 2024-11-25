@@ -1,5 +1,11 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+data/
+feature_extractor/
+ibrnet/
+kmeans_pytorch/
+out/
+tasks/
 *.py[cod]
 *$py.class
 
